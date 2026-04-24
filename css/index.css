@@ -1,0 +1,58 @@
+body[data-page="home"] {
+    --page-tint: #fff7d9;
+}
+
+body[data-page="home"] .hero__panel {
+    background:
+        radial-gradient(circle at 14% 20%, rgba(243, 202, 68, 0.34), transparent 18%),
+        radial-gradient(circle at 86% 16%, rgba(214, 241, 175, 0.26), transparent 16%),
+        radial-gradient(circle at 76% 82%, rgba(154, 220, 183, 0.24), transparent 18%),
+        linear-gradient(135deg, #10683e 0%, #2d9658 52%, #0c512f 100%);
+}
+
+body[data-page="home"] .hero__panel::before,
+body[data-page="home"] .hero__panel::after {
+    background: rgba(255, 244, 199, 0.16);
+}
+
+body[data-page="home"] .metric {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 248, 222, 0.92));
+    border-color: rgba(217, 164, 65, 0.2);
+}
+
+body[data-page="home"] .feature-card:nth-child(1) {
+    background: linear-gradient(180deg, rgba(255, 248, 222, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+body[data-page="home"] .feature-card:nth-child(2) {
+    background: linear-gradient(180deg, rgba(228, 247, 238, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+body[data-page="home"] .feature-card:nth-child(3) {
+    background: linear-gradient(180deg, rgba(238, 249, 210, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+body[data-page="home"] .program-card:nth-child(1) {
+    border-top: 8px solid #ffbf47;
+}
+
+body[data-page="home"] .program-card:nth-child(2) {
+    border-top: 8px solid #69c58a;
+}
+
+body[data-page="home"] .program-card:nth-child(3) {
+    border-top: 8px solid #98c43c;
+}
+
+body[data-page="home"] .testimonial {
+    background:
+        radial-gradient(circle at top right, rgba(255, 229, 142, 0.18), transparent 18%),
+        linear-gradient(180deg, #2d8b61, #1e5a35);
+}
+
+body[data-page="home"] .cta-band {
+    background:
+        radial-gradient(circle at top left, rgba(255, 225, 138, 0.34), transparent 20%),
+        radial-gradient(circle at bottom right, rgba(214, 241, 175, 0.2), transparent 18%),
+        linear-gradient(135deg, #2a7b51, #1c5d3a);
+}

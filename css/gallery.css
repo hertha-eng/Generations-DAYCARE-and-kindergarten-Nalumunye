@@ -1,0 +1,40 @@
+body[data-page="gallery"] .page-intro__panel {
+    background:
+        radial-gradient(circle at 16% 20%, rgba(255, 220, 131, 0.24), transparent 18%),
+        radial-gradient(circle at 86% 18%, rgba(214, 241, 175, 0.18), transparent 16%),
+        linear-gradient(135deg, rgba(255, 251, 240, 0.98), rgba(240, 247, 222, 0.9));
+}
+
+body[data-page="gallery"] .gallery-card {
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+body[data-page="gallery"] .gallery-card:nth-child(1) .gallery-card__body {
+    background: linear-gradient(180deg, rgba(255, 248, 223, 0.96), rgba(255, 255, 255, 0.92));
+}
+
+body[data-page="gallery"] .gallery-card:nth-child(2) .gallery-card__body {
+    background: linear-gradient(180deg, rgba(227, 246, 236, 0.96), rgba(255, 255, 255, 0.92));
+}
+
+body[data-page="gallery"] .gallery-card:nth-child(3) .gallery-card__body {
+    background: linear-gradient(180deg, rgba(237, 248, 212, 0.96), rgba(255, 255, 255, 0.92));
+}
+
+body[data-page="gallery"] .grid-3 .detail-card:nth-child(1) {
+    background: linear-gradient(180deg, rgba(255, 249, 230, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+body[data-page="gallery"] .grid-3 .detail-card:nth-child(2) {
+    background: linear-gradient(180deg, rgba(232, 247, 239, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+body[data-page="gallery"] .grid-3 .detail-card:nth-child(3) {
+    background: linear-gradient(180deg, rgba(237, 248, 213, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+body[data-page="gallery"] .cta-band {
+    background:
+        radial-gradient(circle at top right, rgba(255, 221, 122, 0.28), transparent 18%),
+        linear-gradient(135deg, #2b7b53, #1f5738);
+}

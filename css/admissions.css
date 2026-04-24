@@ -1,0 +1,37 @@
+body[data-page="admissions"] .page-intro__panel {
+    background:
+        radial-gradient(circle at 82% 20%, rgba(255, 209, 114, 0.28), transparent 16%),
+        radial-gradient(circle at 14% 76%, rgba(157, 224, 189, 0.2), transparent 16%),
+        linear-gradient(135deg, rgba(255, 251, 240, 0.98), rgba(243, 248, 240, 0.92));
+}
+
+body[data-page="admissions"] .timeline-card {
+    border-top: 8px solid #ffbf47;
+    background: linear-gradient(180deg, rgba(255, 247, 220, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+body[data-page="admissions"] .timeline-card:nth-child(2) {
+    border-top-color: #79c896;
+    background: linear-gradient(180deg, rgba(228, 246, 237, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+body[data-page="admissions"] .timeline-card:nth-child(3) {
+    border-top-color: #9aca46;
+    background: linear-gradient(180deg, rgba(237, 247, 209, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+body[data-page="admissions"] .detail-card {
+    background: linear-gradient(180deg, rgba(255, 253, 244, 0.96), rgba(255, 255, 255, 0.88));
+}
+
+body[data-page="admissions"] .form-panel {
+    background:
+        radial-gradient(circle at top right, rgba(255, 220, 133, 0.2), transparent 18%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(253, 248, 232, 0.96));
+}
+
+body[data-page="admissions"] .cta-band {
+    background:
+        radial-gradient(circle at top left, rgba(255, 219, 117, 0.28), transparent 20%),
+        linear-gradient(135deg, #2b7b50, #214f36);
+}

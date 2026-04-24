@@ -1,0 +1,54 @@
+body[data-page="programs"] .page-intro__panel {
+    background:
+        radial-gradient(circle at 18% 22%, rgba(255, 214, 120, 0.28), transparent 16%),
+        radial-gradient(circle at 82% 22%, rgba(136, 204, 164, 0.22), transparent 16%),
+        linear-gradient(135deg, rgba(255, 252, 241, 0.98), rgba(239, 247, 242, 0.9));
+}
+
+body[data-page="programs"] .program-card {
+    position: relative;
+    overflow: hidden;
+}
+
+body[data-page="programs"] .program-card::after {
+    content: "";
+    position: absolute;
+    inset: auto -20px -36px auto;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+body[data-page="programs"] .program-card:nth-child(1) {
+    background: linear-gradient(180deg, rgba(255, 246, 214, 0.96), rgba(255, 255, 255, 0.9));
+    border-top: 8px solid #ffbf47;
+}
+
+body[data-page="programs"] .program-card:nth-child(2) {
+    background: linear-gradient(180deg, rgba(227, 246, 236, 0.96), rgba(255, 255, 255, 0.9));
+    border-top: 8px solid #79c896;
+}
+
+body[data-page="programs"] .program-card:nth-child(3) {
+    background: linear-gradient(180deg, rgba(238, 248, 211, 0.96), rgba(255, 255, 255, 0.9));
+    border-top: 8px solid #9aca46;
+}
+
+body[data-page="programs"] .grid-3 .detail-card:nth-child(1) {
+    background: linear-gradient(180deg, rgba(255, 249, 228, 0.96), rgba(255, 255, 255, 0.88));
+}
+
+body[data-page="programs"] .grid-3 .detail-card:nth-child(2) {
+    background: linear-gradient(180deg, rgba(232, 247, 238, 0.96), rgba(255, 255, 255, 0.88));
+}
+
+body[data-page="programs"] .grid-3 .detail-card:nth-child(3) {
+    background: linear-gradient(180deg, rgba(237, 248, 214, 0.96), rgba(255, 255, 255, 0.88));
+}
+
+body[data-page="programs"] .cta-band {
+    background:
+        radial-gradient(circle at top left, rgba(255, 221, 122, 0.3), transparent 20%),
+        linear-gradient(135deg, #2d7d54, #20583a);
+}

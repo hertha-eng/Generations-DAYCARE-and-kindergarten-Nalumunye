@@ -1,0 +1,38 @@
+body[data-page="contact"] .page-intro__panel {
+    background:
+        radial-gradient(circle at 18% 18%, rgba(255, 216, 120, 0.28), transparent 18%),
+        radial-gradient(circle at 86% 20%, rgba(151, 223, 186, 0.22), transparent 16%),
+        linear-gradient(135deg, rgba(255, 251, 240, 0.98), rgba(239, 247, 242, 0.9));
+}
+
+body[data-page="contact"] .contact-card:nth-child(1) {
+    background: linear-gradient(180deg, rgba(255, 248, 221, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+body[data-page="contact"] .contact-card:nth-child(2) {
+    background: linear-gradient(180deg, rgba(227, 246, 236, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+body[data-page="contact"] .contact-card:nth-child(3) {
+    background: linear-gradient(180deg, rgba(255, 248, 221, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+body[data-page="contact"] .contact-card:nth-child(4) {
+    background: linear-gradient(180deg, rgba(236, 247, 208, 0.96), rgba(255, 255, 255, 0.9));
+}
+
+body[data-page="contact"] .form-panel {
+    background:
+        radial-gradient(circle at top right, rgba(255, 223, 141, 0.2), transparent 18%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(250, 246, 233, 0.96));
+}
+
+body[data-page="contact"] .map-card iframe {
+    box-shadow: var(--shadow-md);
+}
+
+body[data-page="contact"] .cta-band {
+    background:
+        radial-gradient(circle at top left, rgba(255, 221, 122, 0.28), transparent 18%),
+        linear-gradient(135deg, #2c7d54, #1f5939);
+}

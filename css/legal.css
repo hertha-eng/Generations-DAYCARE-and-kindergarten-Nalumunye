@@ -1,0 +1,45 @@
+body[data-page="privacy"] .page-intro__panel,
+body[data-page="terms"] .page-intro__panel {
+    background:
+        radial-gradient(circle at 14% 18%, rgba(255, 223, 141, 0.28), transparent 18%),
+        radial-gradient(circle at 84% 18%, rgba(214, 241, 175, 0.18), transparent 16%),
+        linear-gradient(135deg, rgba(255, 251, 239, 0.98), rgba(240, 248, 214, 0.92));
+}
+
+.legal-layout {
+    display: grid;
+    gap: 1.4rem;
+}
+
+.legal-card {
+    padding: 1.7rem;
+}
+
+.legal-card h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.7rem;
+    line-height: 1.1;
+    margin-bottom: 0.8rem;
+    color: var(--brand-deep);
+}
+
+.legal-card p + p,
+.legal-card ul + p,
+.legal-card p + ul,
+.legal-card ul + ul {
+    margin-top: 0.9rem;
+}
+
+.legal-card ul {
+    padding-left: 1.1rem;
+    color: var(--text-muted);
+}
+
+.legal-card li + li {
+    margin-top: 0.45rem;
+}
+
+.legal-meta {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
