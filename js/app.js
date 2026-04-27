@@ -121,10 +121,10 @@ document.querySelectorAll(".footer a[href]").forEach((link) => {
   }
 });
 
-document.querySelectorAll("form[data-mail-form]").forEach((form) => {
+document.querySelectorAll("form[data-formspree-form]").forEach((form) => {
   const status = form.querySelector("[data-form-status]");
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     if (!form.reportValidity()) {
@@ -135,38 +135,52 @@ document.querySelectorAll("form[data-mail-form]").forEach((form) => {
       return;
     }
 
-    const formData = new FormData(form);
-    const bodyLines = [];
-
-    form.querySelectorAll("input, select, textarea").forEach((field) => {
-      const name = field.getAttribute("name");
-      const label = field.dataset.label;
-
-      if (!name || !label || field.type === "submit") {
-        return;
-      }
-
-      const value = formData.get(name);
-      if (!value) {
-        return;
-      }
-
-      bodyLines.push(`${label}: ${String(value).trim()}`);
-    });
-
-    const subject = form.dataset.subject || "Website Inquiry";
-    const intro = form.dataset.intro || "Hello Generations Daycare and Kindergarten,";
-    const body = `${intro}\n\n${bodyLines.join("\n")}\n\nSent from generationselementary.org`;
-    const mailtoHref = `mailto:info@generationselementary.org?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-
     if (status) {
-      status.textContent = "Your email app is opening with your message ready to send.";
-      status.className = "form-status is-success";
+      status.textContent = "Sending your message...";
+      status.className = "form-status";
     }
 
-    window.location.href = mailtoHref;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton ? submitButton.textContent : "";
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+    }
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method || "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      form.reset();
+
+      if (status) {
+        status.textContent =
+          form.dataset.successMessage ||
+          "Your form has been sent successfully.";
+        status.className = "form-status is-success";
+      }
+    } catch (error) {
+      if (status) {
+        status.textContent =
+          "We could not send your form right now. Please try again in a moment.";
+        status.className = "form-status is-error";
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
+    }
   });
 });
 
